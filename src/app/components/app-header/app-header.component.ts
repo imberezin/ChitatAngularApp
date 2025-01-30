@@ -3,12 +3,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { TimesService } from '../../services/times.service';
+import {MatMenuModule} from '@angular/material/menu';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+
 // import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @Component({
   selector: 'app-app-header',
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, RouterLink ],
   templateUrl: './app-header.component.html',
   styleUrl: './app-header.component.scss'
 })

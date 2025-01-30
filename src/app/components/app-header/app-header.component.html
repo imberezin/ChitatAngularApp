@@ -1,8 +1,20 @@
 <div  style="direction:rtl; align-content: top;">
-<mat-toolbar >
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar  >
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
+    </button> -->
+
+    <button mat-button [matMenuTriggerFor]="menu">      
+        <mat-icon>menu</mat-icon>
     </button>
+<mat-menu #menu="matMenu" style="direction:rtl">
+  <button mat-menu-item routerLink="/" >הלימוד היומי</button>
+
+  <button mat-menu-item routerLink="/app-set-up-personal-study" >הגדר לימוד אישי</button>
+  <button mat-menu-item routerLink="/app-tracking-table-page" >טבלת מעקב</button>
+  <button mat-menu-item routerLink="/app-settings-page" >הגדרות</button>
+</mat-menu>
+    
     <div style="flex-direction: column; padding-left: 10px; padding-right: 10px;"> 
 
         <h4>הלימודי היומי</h4>
