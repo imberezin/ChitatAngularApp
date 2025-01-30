@@ -1,0 +1,13 @@
+    <div class="web-view">
+        
+        <!-- <object [data]="safeUrl" width="90%" height="400"> -->
+            <!-- <embed [src]="safeUrl" width="90%" height="400"/> -->
+             @if (safeUrl != undefined){
+            <iframe [src]="safeUrl()" width="90%" height="400"></iframe>
+             }
+
+        <!-- </object> -->
+        
+    </div>
+
+

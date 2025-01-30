@@ -1,0 +1,24 @@
+
+@use '@angular/material' as mat;
+
+
+
+mat-toolbar{
+    @include mat.toolbar-overrides((
+        container-background-color: var(--mat-sys-primary),
+        container-text-color: white,
+    ))
+}
+
+mat-icon{
+    @include mat.icon-overrides((
+        color: #93fe3f,
+    ))
+
+}
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  

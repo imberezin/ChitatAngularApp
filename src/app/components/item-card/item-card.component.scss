@@ -1,0 +1,26 @@
+// outlined-outline-width
+@use '@angular/material' as mat;
+
+
+mat-card{
+    @include mat.card-overrides((
+        subtitle-text-color: var(--mat-sys-primary),
+        elevated-container-color: red,
+      // outlined-outline-width:150px,
+       
+      ));
+      
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display:flex;
+        flex-direction: column;
+         justify-content: space-between;
+         align-items: stretch;
+    
+    
+}
+
+.mat-mdc-card-title{
+    margin-bottom: 10px;
+}

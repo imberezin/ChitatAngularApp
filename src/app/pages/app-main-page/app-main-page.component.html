@@ -1,0 +1,17 @@
+<div style="direction:rtl; margin: 10px;">
+    @if (timesService.itemHe()) {
+        <div>
+            <mat-grid-list cols="3" rowHeight="150px">
+                    @for (item of timesService.itemHe(); track item) {
+                        <mat-grid-tile>
+                            <app-item-card  class="gird-card"  [item]="item"  (messageEvent)="handleMessage($event)"></app-item-card>
+                        </mat-grid-tile>
+                    }
+          </mat-grid-list>
+        </div>
+        @if (lastMessage() != null){
+            <app-book-view [item]="lastMessage()!" [safeUrl]="safeUrl()"></app-book-view>
+        }
+        
+      }
+</div>

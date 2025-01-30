@@ -1,0 +1,28 @@
+<div  style="direction:rtl; align-content: top;">
+<mat-toolbar >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div style="flex-direction: column; padding-left: 10px; padding-right: 10px;"> 
+
+        <h4>הלימודי היומי</h4>
+        <h5>
+          {{today()}} 
+          @if (timesService.parashatWeek() != null){
+            <span> - {{ timesService.parashatWeek()?.title }} </span>
+          }
+        </h5>
+    
+    </div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+
+   
+  </mat-toolbar>
+  
+</div>
