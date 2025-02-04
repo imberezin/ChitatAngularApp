@@ -1,0 +1,36 @@
+.main-from{
+    direction: rtl;
+    width: 99.5%;
+    height: 500px;
+    //margin: 0 auto;
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: self-start;
+  
+    padding-right: 50px;
+
+}
+
+.checkbox-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 16px;
+  }
+  
+  .checkbox-item {
+    margin-bottom: 4px;
+  }
+
+  .hedearH4{
+    padding-right: 10px;    
+
+  }
+
+  .submit-button {
+    margin-top: 16px;
+    width: 200px;
+  }
+

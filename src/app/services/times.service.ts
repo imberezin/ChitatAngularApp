@@ -57,7 +57,7 @@ export class TimesService {
       }
       
       const data: TodayTimes = await res.json();
-      console.log(data);
+      // console.log(data);
       this.times.set(data);
       this.fatchTodayInfo()
     } catch (error) {
@@ -139,7 +139,7 @@ export class TimesService {
           console.log("\n==== parashat ====")
 
           this.parashatWeek.set(item)
-          console.log(this.parashatWeek())
+         // console.log(this.parashatWeek())
 
         }
 
@@ -147,7 +147,7 @@ export class TimesService {
     }
     console.log("\n==== items ====")
 
-    console.log(items)
+   // console.log(items)
     this.itemHe.set(items);
 
     

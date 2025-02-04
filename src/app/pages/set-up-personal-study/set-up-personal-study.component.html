@@ -1,1 +1,41 @@
-<p>set-up-personal-study works!</p>
+<div class="main-from">
+    <form [formGroup]="checkboxForm" class="checkbox-form" (ngSubmit)="onSubmit()">
+        <h4 class="hedearH4">הכנס את השם המלא שלך</h4>
+
+        <mat-form-field >
+            <mat-label>שם מלא</mat-label>
+            <input matInput placeholder="" required formControlName = "fUserName" id = "fUserName"/>
+            @if(fUserName?.invalid && (fUserName?.dirty || fUserName?.touched)){
+                <div class="alert alert-danger" style="direction: rtl;">
+                    @if(fUserName?.hasError('required')){
+                        <div style="direction: rtl;">
+                            שדה חובה!.
+                        </div>
+                    }
+                    @if(fUserName?.hasError('minlength')){
+                        <div style="direction: rtl;">
+                            השם חייב לכלול לפחות 4 אותיות.
+                        </div>
+                    }
+                </div>
+            }
+    
+        </mat-form-field>
+
+    
+        <h4 class="hedearH4">בחר את הלימודי היומי שלך</h4>
+
+        @for (title of fromTitles; track title) {
+          <mat-checkbox [formControlName]="title" class="checkbox-item">
+            {{ title }}
+          </mat-checkbox>
+        }
+        
+        <button mat-raised-button color="primary" type="submit" class="submit-button">
+          שלח
+        </button>
+      </form>
+  
+  
+</div>
+  
